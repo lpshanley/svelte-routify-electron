@@ -6,8 +6,8 @@
   "author": "Lucas Shanley <lpshanley@gmail.com>",
   "scripts": {
     "build": "rollup -c && electron-builder",
-	"dev": "routify -d -c dev:server",
-	"dev:server": "rollup -c -w",
+    "dev": "routify -d --routify-dir routify -c dev:server",
+    "dev:server": "rollup -c -w",
     "start": "cross-env NODE_ENV=development electron src/electron"
   },
   "build": {
