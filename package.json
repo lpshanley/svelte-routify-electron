@@ -1,0 +1,33 @@
+{
+  "name": "svelte-routify-electron",
+  "description": "svelte-routify-electron",
+  "version": "0.1.0",
+  "main": "src/electron.js",
+  "author": "Lucas Shanley <lpshanley@gmail.com>",
+  "scripts": {
+    "build": "rollup -c && electron-builder",
+	"dev": "routify -d -c dev:server",
+	"dev:server": "rollup -c -w",
+    "start": "cross-env NODE_ENV=development electron src/electron"
+  },
+  "build": {
+    "appId": "com.example.app"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@sveltech/routify": "^1.7.12",
+    "electron": "^8.0.1",
+    "electron-builder": "^22.3.2",
+    "electron-reload": "^1.5.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.23.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.0",
+    "sirv-cli": "^0.4.4"
+  }
+}
